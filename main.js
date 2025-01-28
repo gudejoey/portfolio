@@ -29,47 +29,6 @@ function unfade(element) {
     }, 10);
 }
 
-window.onload = function(){
-    var temp = Math.floor(Math.random()*greets.length);
-    var hey = greets[temp];
-    heyo.innerText = hey;
-    setTimeout(function(){
-        heyo.style.translate="0px 0px";
-        cover.style.backgroundColor ="none";
-    },300);
-    
-    setTimeout(function(){
-        unfade(hi);
-    },1000);
-
-    hi.addEventListener("click",function(){
-        var deg=0, waves=0, dir=-1;
-    
-        var timer = setInterval(function(){
-            if(waves==5){
-                clearInterval(timer);
-            }
-            if(deg>=15 || deg<=0){
-                waves++;
-                dir*=-1;
-            }
-            wave.style.rotate = deg.toString()+"deg";
-            deg+=dir;
-        
-        },10);
-        
-        setTimeout(function(){
-            loader.style.height = "0vh";
-            hi.style.display="none";
-            cover.style.display="none";
-            heyo.style.display="none";
-            body.style.overflow="visible";
-        },800);
-        
-    })
-
-};
-
 if(!touch){
     body.onmousemove = function(e) { 
             // var mx = e.pageX - e.currentTarget.offsetLeft; 

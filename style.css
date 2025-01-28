@@ -114,7 +114,7 @@ a svg{
     border-width:3px;
     border-color:var(--txt); */
     margin: 0.25rem 0 0 0;
-    padding:0 1.5rem;
+    padding:0 0rem;
 }
 
 svg {
